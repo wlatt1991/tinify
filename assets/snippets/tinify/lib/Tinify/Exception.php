@@ -4,8 +4,8 @@ namespace Tinify;
 
 class Exception extends \Exception {
     public $status;
-//     public $message;
-//
+    public $message;
+
 //     public static function getMessage() {
 //         return $this->message;
 //     }
