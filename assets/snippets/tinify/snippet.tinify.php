@@ -93,7 +93,7 @@ if (!file_exists($outputFilename)) {
 
     } catch(\Tinify\AccountException $e) {
         // Verify your API key and account limit.
-        $modx->logEvent(0, 3, "The error message is: " . $e.getMessage(), 'tinify');
+        $modx->logEvent(0, 3, "The error message is: " . $e->getMessage(), 'tinify');
         return $input;
         
     } catch(\Tinify\ClientException $e) { 
