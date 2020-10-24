@@ -4,6 +4,11 @@ namespace Tinify;
 
 class Exception extends \Exception {
     public $status;
+    public $message;
+
+    public function getMessage() {
+        return $message;
+    }
 
     public static function create($message, $type, $status) {
         if ($status == 401 || $status == 429) {
@@ -22,6 +27,7 @@ class Exception extends \Exception {
 
     function __construct($message, $type = NULL, $status = NULL) {
         $this->status = $status;
+        $this->message = $message;
         if ($status) {
             parent::__construct($message . " (HTTP " . $status . "/" . $type . ")");
         } else {
