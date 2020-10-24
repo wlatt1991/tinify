@@ -6,7 +6,7 @@ class Exception extends \Exception {
     public $status;
     public $message;
 
-    public function getMessage() {
+    public static function getMessage() {
         return $message;
     }
 
